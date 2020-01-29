@@ -1,0 +1,43 @@
+body {
+  font-family: "Lato", sans-serif;
+  display: grid;
+  grid-template-areas: "header" "top" "about" "work" "twitter" "shop" "mailing" "footer";
+  grid-template-rows: 155px auto auto auto auto auto 470px 250px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+body .top {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: top;
+}
+body .about {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: about;
+}
+body .work {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: work;
+}
+body .twitter {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: twitter;
+}
+body .shop {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: shop;
+}
+body .mailing {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: mailing;
+}
+body .footer {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: footer;
+}

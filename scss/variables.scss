@@ -1,0 +1,36 @@
+$fontFamily: 'Lato', sans-serif;
+
+//font-size
+$fzMenu: 0.8125rem; //13pt
+$fzTitle: 1.125rem; //18pt
+$fzDescription: 1.125rem; //18pt
+
+//color text
+$clrMenu: #4d4959;
+$clrTitle: #353738;
+$clrDescription: #848789;
+//color bg
+$bgMain: #ffffff;
+$bgSeparate: #f7f7f7;
+$bgShop: #282f35;
+
+// height for grid-item
+$hHeader: 155px;
+
+//$hTop: minmax(100px, 800px);
+//$hAbout: minmax(470px, max-content);
+//$hTwitter: minmax(440px, 1fr);
+
+$hTop: auto;
+$hAbout: auto;
+$hWork: auto;
+$hTwitter: auto;
+$hShop: auto;
+$hMailing: 470px;
+
+$hFooter: 250px;
+
+//other
+$countArticle: 3;
+$elBeforeLogo: 2;
+

@@ -1,0 +1,35 @@
+@import "variables";
+@import "mixins";
+
+
+body {
+  font-family: $fontFamily;
+
+  display: grid;
+  grid-template-areas: "header" "top" "about" "work" "twitter" "shop" "mailing" "footer";
+  grid-template-rows: $hHeader $hTop $hAbout $hWork $hTwitter $hShop $hMailing $hFooter;
+  grid-template-columns: 1fr;
+  justify-items: center;
+
+  .top {
+    grid-area: top;
+  }
+  .about {
+    grid-area: about;
+  }
+  .work {
+    grid-area: work;
+  }
+  .twitter {
+    grid-area: twitter;
+  }
+  .shop {
+    grid-area: shop;
+  }
+  .mailing {
+    grid-area: mailing;
+  }
+  .footer{
+    grid-area: footer;
+  }
+}

@@ -1,0 +1,20 @@
+@mixin text($fz: 1rem, $lh: 1.3, $fw: initial, $clr: #000){
+  font-size: $fz;
+  line-height: $lh;
+  font-weight: $fw;
+  color: $clr;
+
+  @content;
+}
+
+@mixin bicycle ($hRow, $countElmInGrid){
+  display: grid;
+  grid-template-rows: $hRow;
+  grid-template-columns: repeat($countElmInGrid, 1fr);
+}
+
+//mixin for main img for article if it one row
+@mixin imgArticle($gridColumnStart, $gridColumnEnd){
+  grid-column-start: $gridColumnStart;
+  grid-column-end: $gridColumnEnd;
+}
