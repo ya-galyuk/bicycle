@@ -126,7 +126,8 @@ body {
       grid-template-rows: 1fr;
       grid-template-columns: repeat(3, 1fr);
 
-      .bicycle__imgBig-box{
+      .bicycle__imgBig,
+      .bicycle__imgSmall{
         background-size: cover;
         display: grid;
         justify-items: center;
@@ -139,14 +140,15 @@ body {
         margin-top: 0;
 
         .b-description__content{
-          padding: 4.375rem 4rem 3.3rem;
+          padding: 3.3rem 4rem;
           position: relative;
           display: grid;
           justify-items: center;
           text-align: center;
 
           .b-description__logo-box{
-            display: inline-block;
+            display: inline-grid;
+            align-items: center;
           }
           .b-description__title{
             @include text(1.125rem, 1.3, 900, $clrTitle);
@@ -190,39 +192,65 @@ body {
             height: 100%;
           }
         }
-
         @media screen and (max-width: 768px){
           grid-template-columns: 1fr;
         }
       }
-
-      @media screen and (max-width: 768px){
-        .bicycle__imgBig-box{
-          display: none;
-        }
-        grid-template-columns: 1fr;
-      }
-
       &#b-oliva{
-        .bicycle__imgBig-box{
-          background: url("../images/oliva-big.jpg") no-repeat;
+        .bicycle__imgBig{
+          background: url("../images/oliva/oliva-big.jpg")  no-repeat;
           @include imgArticle(1, 3);
         }
       }
       &#laBoriosa{
-        .bicycle__imgBig-box{
-          background: url("../images/laBoriosa-big.jpg") no-repeat;
+        .bicycle__imgBig{
+          background: url("../images/laBoriosa/laBoriosa-big.jpg") no-repeat;
           @include imgArticle(2, 4);
           order: 2;
         }
-
         .b-description{
           @include imgArticle(1, 2);
           order: 1;
         }
       }
-    }
+      &#hulot{
+        .bicycle__imgSmall:nth-child(1){
+          background: url("../images/hulot/hulot-small-1.jpg") no-repeat;
+          @include imgArticle(1, 2);
+          order: 1;
+        }
+        .bicycle__imgSmall:nth-child(2){
+           background: url("../images/hulot/hulot-small-2.jpg") center center no-repeat;
+           @include imgArticle(3, 4);
+          margin: 0;
+           order: 3;
+         }
+        .b-description{
+          @include imgArticle(2, 3);
+          order: 2;
+        }
+        @media screen and (max-width: 1024px){
+          grid-template-columns: repeat(2, 1fr);
 
+          .bicycle__imgSmall:nth-child(2){
+            display: none;
+          }
+        }
+      }
+      @media screen and (max-width: 768px){
+        grid-template-columns: 1fr;
+
+        .bicycle__imgBig,
+        .bicycle__imgSmall{
+          display: none;
+        }
+        &#hulot {
+          .b-description {
+            grid-column-start: 1;
+          }
+        }
+      }
+    }
   }
   .twitter {
     grid-area: twitter;
