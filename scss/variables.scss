@@ -4,11 +4,14 @@ $fontFamily: 'Lato', sans-serif;
 $fzMenu: 0.8125rem; //13pt
 $fzTitle: 1.125rem; //18pt
 $fzDescription: 1.125rem; //18pt
+$fzBtn: 0.7(7)rem; //14pt
 
 //color text
 $clrMenu: #4d4959;
 $clrTitle: #353738;
 $clrDescription: #848789;
+$clrBtn: #f7f7f7;
+
 //color bg
 $bgMain: #ffffff;
 $bgSeparate: #f7f7f7;
@@ -16,18 +19,19 @@ $bgShop: #282f35;
 
 // height for grid-item
 //$hHeader: 155px;
-$hHeader: auto;
-
-$hTop: auto;
-$hAbout: auto;
-$hWork: auto;
-$hTwitter: auto;
-$hShop: auto;
-$hMailing: 470px;
-
-$hFooter: 250px;
+$hHeader: max-content;
+$hTop: max-content;
+$hAbout: minmax(465px, max-content);
+$hWork: max-content;
+$hTwitter: minmax(470px, max-content);
+$hShop: max-content;
+$hArticle: minmax(min-content, 600px);
+//$hArticle:  max-content;
+$hMailing: minmax(470px, max-content);
+$hFooter: minmax(250px, max-content);
 
 //other
-$countArticle: 3;
-$elLogo: 2;
+$countArticle: 1;
+$elBeforeLogo: 2;
+$elAfterLogo: 2;
 
