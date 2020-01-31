@@ -2,8 +2,8 @@ body {
   font-family: "Lato", sans-serif;
   display: grid;
   grid-template-areas: "header" "top" "about" "work" "twitter" "shop" "mailing" "footer";
-  grid-template-rows: -webkit-max-content -webkit-max-content minmax(465px, -webkit-max-content) -webkit-max-content minmax(470px, -webkit-max-content) -webkit-max-content minmax(470px, -webkit-max-content) minmax(250px, auto);
-  grid-template-rows: max-content max-content minmax(465px, max-content) max-content minmax(470px, max-content) max-content minmax(470px, max-content) minmax(250px, auto);
+  grid-template-rows: -webkit-max-content -webkit-max-content minmax(465px, -webkit-max-content) -webkit-max-content minmax(470px, -webkit-max-content) auto minmax(470px, -webkit-max-content) minmax(250px, auto);
+  grid-template-rows: max-content max-content minmax(465px, max-content) max-content minmax(470px, max-content) auto minmax(470px, max-content) minmax(250px, auto);
   grid-template-columns: 1fr;
   justify-items: center;
 }
@@ -351,14 +351,16 @@ body .shop {
   -ms-grid-column: 1;
   grid-area: shop;
   display: grid;
-  grid-template-rows: repeat(2, -webkit-max-content) 200px;
-  grid-template-rows: repeat(2, max-content) 200px;
+  grid-template-rows: repeat(2, 1fr) 200px;
   grid-template-columns: repeat(6, 1fr);
   justify-content: center;
-  align-items: stretch;
   width: 100%;
   max-width: 1600px;
   background: #282f35;
+}
+body .shop .shop__item {
+  display: grid;
+  align-items: stretch;
 }
 body .shop #shopItem-1 {
   grid-area: 1/1/2/2;
@@ -411,9 +413,6 @@ body .shop #shopItem-8 {
 }
 body .shop #shopItem-9 {
   grid-area: 3/1/4/7;
-}
-body .shop .shop__img {
-  height: 100%;
 }
 body .shop .shop-f {
   display: grid;

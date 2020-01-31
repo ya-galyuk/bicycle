@@ -330,13 +330,16 @@ body {
   .shop {
     grid-area: shop;
     display: grid;
-    grid-template-rows: repeat(2, max-content) 200px;
+    grid-template-rows: repeat(2, 1fr) 200px;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
-    align-items: stretch;
     width: 100%;
     max-width: 1600px;
     background: $bgShop;
+    .shop__item{
+      display: grid;
+      align-items: stretch;
+    }
 
     #shopItem-1{grid-area: 1/1/2/2;}
     #shopItem-2{grid-area: 1/2/2/3;}
@@ -371,7 +374,6 @@ body {
     #shopItem-7{grid-area: 2/5/3/6;}
     #shopItem-8{grid-area: 2/6/3/7;}
     #shopItem-9{grid-area: 3/1/4/7;}
-    .shop__img{height: 100%;}
     .shop-f{
       display: grid;
       justify-items: center;
