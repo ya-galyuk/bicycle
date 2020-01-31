@@ -4,7 +4,6 @@
 
 body {
   font-family: $fontFamily;
-
   display: grid;
   grid-template-areas: "header" "top" "about" "work" "twitter" "shop" "mailing" "footer";
   grid-template-rows: $hHeader $hTop $hAbout $hWork $hTwitter $hShop $hMailing $hFooter;
@@ -16,7 +15,6 @@ body {
     position: absolute;
     top: 35px;
     display: grid;
-    //justify-content: center;
     justify-items: center;
     align-items: center;
     width: 100%;
@@ -595,5 +593,10 @@ body {
 
   &.overflowHidden{
     overflow: hidden;
+  }
+  @media screen and (min-width: 1025px){
+    &.overflowHidden{
+      overflow: initial;
+    }
   }
 }

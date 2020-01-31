@@ -649,3 +649,8 @@ body .footer .f-copyright {
 body.overflowHidden {
   overflow: hidden;
 }
+@media screen and (min-width: 1025px) {
+  body.overflowHidden {
+    overflow: initial;
+  }
+}
