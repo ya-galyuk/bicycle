@@ -13,6 +13,8 @@ $fzMailingBtn: 1.5rem;
 $fzAddressTitle: 1rem; //16pt
 $fzAddress: 0.77rem; //14pt
 $fzCopyright: 0.77rem; //14pt
+$fzMenuSmall: 2rem;
+$fzMenuSmallHover: 3rem;
 
 //line-height
 $lhDescription: 2.125rem;
@@ -33,18 +35,22 @@ $clrMailingInput: #929292;
 $clrMailingBtn: #ffffff;
 $clrAddress: #848789;
 $clrCopyright: #848789;
+$clrItemMenuSmall: #4d4959;
+$clrItemHoverMenuSmall: #fff;
 
 //color bg
 $bgMain: #ffffff;
 $bgSeparate: #f7f7f7;
 $bgShop: #282f35;
-
 $bgTwitterCarousel: #a9afb3;
 $bgShopItem: rgba(88,165,137, 80%);
 $bgMailingBtn: #58a589;
+$bgMenuIcon: #58a589;
+$bgMenuIconHover: #282f35;
+$bgMenuSmall: #fff;
+$bgItemHoverMenuSmall: #282f35;
 
 // height for grid-item
-//$hHeader: 155px;
 $hHeader: max-content;
 $hTop: max-content;
 $hAbout: minmax(465px, max-content);
@@ -52,7 +58,6 @@ $hWork: max-content;
 $hTwitter: minmax(470px, max-content);
 $hShop: auto;
 $hArticle: minmax(min-content, 600px);
-//$hArticle:  max-content;
 $hMailing: minmax(470px, max-content);
 $hFooter: minmax(250px, auto);
 
