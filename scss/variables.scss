@@ -10,12 +10,18 @@ $fzBtn: 0.77rem; //14pt
 $fzMailingTitle: 1.5rem; //24pt
 $fzMailingInput: 1.25rem; //20pt
 $fzMailingBtn: 1.5rem;
+$fzAddressTitle: 1rem; //16pt
+$fzAddress: 0.77rem; //14pt
+$fzCopyright: 0.77rem; //14pt
 
 //line-height
 $lhDescription: 2.125rem;
 $lhMailingTitle: 2.125rem;
 $lhMailingInput: 1.5rem;
 $lhMailingBtn: 1.5rem;
+$lhAddress: 1.125rem; //18pt
+$lhCopyright: 1.125rem; //18pt
+
 
 //color text
 $clrMenu: #4d4959;
@@ -25,6 +31,8 @@ $clrShopIcon: #ffffff;
 $clrShopBtn: #f7f7f7;
 $clrMailingInput: #929292;
 $clrMailingBtn: #ffffff;
+$clrAddress: #848789;
+$clrCopyright: #848789;
 
 //color bg
 $bgMain: #ffffff;
@@ -42,11 +50,11 @@ $hTop: max-content;
 $hAbout: minmax(465px, max-content);
 $hWork: max-content;
 $hTwitter: minmax(470px, max-content);
-$hShop: max-content;
+$hShop: auto;
 $hArticle: minmax(min-content, 600px);
 //$hArticle:  max-content;
 $hMailing: minmax(470px, max-content);
-$hFooter: minmax(250px, max-content);
+$hFooter: minmax(250px, auto);
 
 //other
 $countArticle: 3;
