@@ -270,37 +270,175 @@ body .twitter {
   -ms-grid-row: 5;
   -ms-grid-column: 1;
   grid-area: twitter;
+  display: grid;
+  justify-content: center;
   width: 100%;
   text-align: center;
   background: #f7f7f7;
+  padding: 3.5rem 2rem 3.5rem;
+}
+body .twitter .twitter__list {
+  max-width: 1080px;
+  max-height: 325px;
+  overflow: hidden;
+}
+body .twitter .twitter__list .twitter__item {
+  display: grid;
+  justify-items: center;
+  align-content: baseline;
+  padding: 4.5rem 0;
+}
+body .twitter .twitter__list .twitter__item .twitter__title {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 900;
+  color: #353738;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  margin-top: 30px;
+}
+body .twitter .twitter__list .twitter__item .twitter__title .title__description {
+  font-size: 1.125rem;
+  line-height: 1.3;
+  font-weight: 400;
+  color: #848789;
+  letter-spacing: 1px;
+  word-spacing: 5px;
+  font-style: italic;
+}
+body .twitter .twitter__list .twitter__item .twitter__description {
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  font-weight: 400;
+  color: #848789;
+  font-style: italic;
+  margin-top: 15px;
+  padding-left: 40px;
+  word-spacing: -0.1rem;
+}
+@media screen and (max-width: 1024px) {
+  body .twitter .twitter__list .twitter__item .twitter__description {
+    padding-left: 0;
+  }
+}
+body .twitter .carousel-items {
+  display: inline-grid;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+body .twitter .carousel-items .carousel__list {
+  display: inline-grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .twitter .carousel-items .carousel__list .carousel__item {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid #a9afb3;
+  margin: 5px;
+}
+body .twitter .carousel-items .carousel__list .carousel__item.select-item {
+  background: #a9afb3;
+}
+body .twitter .carousel-items .carousel__list .carousel__item:hover {
+  border: 1px solid #50565a;
+  background: #50565a;
 }
 body .shop {
   -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: shop;
   display: grid;
+  grid-template-rows: repeat(2, -webkit-max-content) 200px;
+  grid-template-rows: repeat(2, max-content) 200px;
+  grid-template-columns: repeat(6, 1fr);
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width: 100%;
   max-width: 1600px;
   background: #282f35;
 }
-body .shop .shop-f__btn {
-  font-size: 0.7 7 rem;
+body .shop #shopItem-1 {
+  grid-area: 1/1/2/2;
+}
+body .shop #shopItem-2 {
+  grid-area: 1/2/2/3;
+}
+body .shop #shopItem-3 {
+  grid-area: 2/1/3/3;
+}
+body .shop #shopItem-4 {
+  grid-area: 1/3/3/4;
+}
+body .shop #shopItem-5 {
+  grid-area: 1/4/3/5;
+}
+body .shop #shopItem-6 {
+  grid-area: 1/5/2/7;
+  display: grid;
+  position: relative;
+}
+body .shop #shopItem-6 .shop__bg-item {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(88, 165, 137, 0.8);
+}
+body .shop #shopItem-6 .shop__bg-item .shop__icon {
+  width: 51px;
+  height: 30px;
+  background: url("../img/bicycle-icon.png") no-repeat;
+}
+body .shop #shopItem-6 .shop__bg-item .shop__text {
+  font-size: 0.77rem;
+  line-height: 1.3;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+body .shop #shopItem-7 {
+  grid-area: 2/5/3/6;
+}
+body .shop #shopItem-8 {
+  grid-area: 2/6/3/7;
+}
+body .shop #shopItem-9 {
+  grid-area: 3/1/4/7;
+}
+body .shop .shop__img {
+  height: 100%;
+}
+body .shop .shop-f {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+body .shop .shop-f .shop-f__btn {
+  font-size: 0.77rem;
   line-height: 1.3;
   font-weight: 700;
   color: #f7f7f7;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   width: 300px;
   height: 50px;
   border: 1px solid #f7f7f7;
   background: transparent;
 }
+body .shop .shop-f .shop-f__btn:hover {
+  color: #282f35;
+  background: #f7f7f7;
+}
 body .mailing {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
-  text-align: center;
   grid-area: mailing;
 }
 body .footer {

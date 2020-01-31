@@ -342,8 +342,32 @@ body {
     #shopItem-2{grid-area: 1/2/2/3;}
     #shopItem-3{grid-area: 2/1/3/3;}
     #shopItem-4{grid-area: 1/3/3/4;}
-    #shopItem-5{grid-area: 1/4/3/5; align-self: stretch}
-    #shopItem-6{grid-area: 1/5/3/7;}
+    #shopItem-5{grid-area: 1/4/3/5;}
+    #shopItem-6{grid-area: 1/5/2/7;
+      display: grid;
+      position: relative;
+      .shop__bg-item{
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: $bgShopItem;
+
+        .shop__icon{
+          width: 51px;
+          height: 30px;
+          background: url("../img/bicycle-icon.png") no-repeat;
+        }
+        .shop__text{
+          @include text($fzShopIcon, 1.3, 900, $clrShopIcon);
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          margin-top: 10px;
+        }
+      }
+    }
     #shopItem-7{grid-area: 2/5/3/6;}
     #shopItem-8{grid-area: 2/6/3/7;}
     #shopItem-9{grid-area: 3/1/4/7;}
@@ -369,8 +393,6 @@ body {
     }
   }
   .mailing {
-    text-align: center;
-
     grid-area: mailing;
   }
   .footer{
