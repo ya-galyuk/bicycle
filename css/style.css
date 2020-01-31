@@ -341,18 +341,22 @@ body .twitter {
   width: 100%;
   text-align: center;
   background: #f7f7f7;
-  padding: 3.5rem 2rem 3.5rem;
+  padding: 5rem 2rem 1rem;
 }
 body .twitter .twitter__list {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
   max-width: 1080px;
-  max-height: 325px;
-  overflow: hidden;
 }
 body .twitter .twitter__list .twitter__item {
-  display: grid;
+  display: none;
   justify-items: center;
   align-content: baseline;
-  padding: 4.5rem 0;
+  width: 100%;
+}
+body .twitter .twitter__list .twitter__item.twitterSelect {
+  display: grid;
 }
 body .twitter .twitter__list .twitter__item .twitter__title {
   font-size: 1.125rem;
