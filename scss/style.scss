@@ -395,35 +395,40 @@ body {
   .mailing {
     grid-area: mailing;
     display: grid;
-    justify-items: center;
+    justify-content: center;
     align-content: space-between;
-    padding: 110px 0;
-    .mailling__logo{
+    text-align: center;
+    width: 100%;
+    padding: 110px 20px;
+
+    .mailing__logo{
+      justify-self: center;
       width: 95px;
       height: 85px;
       background: url("../img/logo.png");
     }
-    .mailling__title{
+    .mailing__title{
       @include text($fzMailingTitle, $lhMailingTitle, 400, $clrDescription);
       font-style: italic;
+      margin: 20px 0;
     }
     .mailing__inputBtn {
-      display: inline-grid;
-      grid-auto-flow: column;
+      display: grid;
+      grid-template-columns: minmax(auto, 410px) minmax(auto, 125px);
       place-items: center;
 
-      .mailling__input {
+      .mailing__input {
         @include text($fzMailingInput, $lhMailingInput, 400, $clrDescription);
         font-style: italic;
-        width: 400px;
+        width: 100%;
         height: 70px;
-        margin-right: 8px;
+        margin-right: 10px;
         padding: 25px;
 
       }
       .mailing__btn {
         @include text($fzMailingBtn, $lhMailingBtn, 300, $clrMailingBtn);
-        width: 125px;
+        width: 100%;
         height: 70px;
         border: none;
         background: $bgMailingBtn;
@@ -436,10 +441,80 @@ body {
         }
       }
     }
+    @media screen and (max-width:600px){
+
+      justify-content: initial;
+
+      .mailing__inputBtn{
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 100%;
+
+        .mailing__input{
+          margin: 0;
+        }
+      }
+    }
   }
   .footer{
     grid-area: footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     width: 100%;
+    padding: 40px;
     background: $bgSeparate;
+
+    .f-address{
+      justify-self: end;
+      @include text($fzAddress, $lhAddress, 400, $clrAddress);
+      letter-spacing: .035rem;
+
+      .f-address__title{
+        font-size: $fzAddressTitle;
+        font-style: normal;
+        letter-spacing: 0;
+      }
+    }
+    .f-social__list{
+      display: grid;
+      grid-auto-flow: column;
+
+      .f-social__item:not(:last-child){
+        margin-right: 15px;
+      }
+    }
+    .f-copyright{
+      justify-self: start;
+      @include text($fzCopyright, $lhCopyright, 400, $clrCopyright);
+      font-style: italic;
+      padding-left: 75px;
+    }
+
+    @media screen and (max-width:768px){
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .f-social__list{
+        align-self: center;
+      }
+      .f-copyright{
+        grid-area: 2/1/3/3;
+        justify-self: center;
+        padding-left: 0;
+      }
+    }
+    @media screen and (max-width:425px){
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      .f-address{
+        justify-self: start;
+      }
+      .f-social__list{
+        align-self: end;
+      }
+      .f-copyright{
+        grid-area: initial;
+      }
+    }
   }
 }
