@@ -7,16 +7,24 @@ $fzDescription: 1.125rem; //18pt
 $fzDescriptionTwitter: 1.5rem; //24pt
 $fzShopIcon: 0.77rem; //14pt
 $fzBtn: 0.77rem; //14pt
+$fzMailingTitle: 1.5rem; //24pt
+$fzMailingInput: 1.25rem; //20pt
+$fzMailingBtn: 1.5rem;
 
 //line-height
 $lhDescription: 2.125rem;
+$lhMailingTitle: 2.125rem;
+$lhMailingInput: 1.5rem;
+$lhMailingBtn: 1.5rem;
 
 //color text
 $clrMenu: #4d4959;
 $clrTitle: #353738;
 $clrDescription: #848789;
 $clrShopIcon: #ffffff;
-$clrBtn: #f7f7f7;
+$clrShopBtn: #f7f7f7;
+$clrMailingInput: #929292;
+$clrMailingBtn: #ffffff;
 
 //color bg
 $bgMain: #ffffff;
@@ -25,6 +33,7 @@ $bgShop: #282f35;
 
 $bgTwitterCarousel: #a9afb3;
 $bgShopItem: rgba(88,165,137, 80%);
+$bgMailingBtn: #58a589;
 
 // height for grid-item
 //$hHeader: 155px;
