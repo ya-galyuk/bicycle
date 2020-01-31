@@ -356,7 +356,7 @@ body {
         background: $bgShopItem;
 
         .shop__icon{
-          width: 51px;
+          width: 50px;
           height: 30px;
           background: url("../img/bicycle-icon.png") no-repeat;
         }
@@ -377,23 +377,65 @@ body {
       justify-items: center;
       align-items: center;
       .shop-f__btn{
-        @include text($fzBtn, 1.3, 700, $clrBtn);
+        @include text($fzBtn, 1.3, 700, $clrShopBtn);
         letter-spacing: 3px;
         text-transform: uppercase;
         width: 300px;
         height: 50px;
-        border: 1px solid $clrBtn;
+        border: 1px solid $clrShopBtn;
         background: transparent;
 
         &:hover{
           color: $bgShop;
-          background: $clrBtn;
+          background: $clrShopBtn;
         }
       }
     }
   }
   .mailing {
     grid-area: mailing;
+    display: grid;
+    justify-items: center;
+    align-content: space-between;
+    padding: 110px 0;
+    .mailling__logo{
+      width: 95px;
+      height: 85px;
+      background: url("../img/logo.png");
+    }
+    .mailling__title{
+      @include text($fzMailingTitle, $lhMailingTitle, 400, $clrDescription);
+      font-style: italic;
+    }
+    .mailing__inputBtn {
+      display: inline-grid;
+      grid-auto-flow: column;
+      place-items: center;
+
+      .mailling__input {
+        @include text($fzMailingInput, $lhMailingInput, 400, $clrDescription);
+        font-style: italic;
+        width: 400px;
+        height: 70px;
+        margin-right: 8px;
+        padding: 25px;
+
+      }
+      .mailing__btn {
+        @include text($fzMailingBtn, $lhMailingBtn, 300, $clrMailingBtn);
+        width: 125px;
+        height: 70px;
+        border: none;
+        background: $bgMailingBtn;
+
+        &:hover{
+          border: 1px solid $bgMailingBtn;
+          font-weight: 900;
+          color: $bgMailingBtn;
+          background: $clrMailingBtn;
+        }
+      }
+    }
   }
   .footer{
     grid-area: footer;

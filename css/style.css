@@ -390,7 +390,7 @@ body .shop #shopItem-6 .shop__bg-item {
   background: rgba(88, 165, 137, 0.8);
 }
 body .shop #shopItem-6 .shop__bg-item .shop__icon {
-  width: 51px;
+  width: 50px;
   height: 30px;
   background: url("../img/bicycle-icon.png") no-repeat;
 }
@@ -440,6 +440,54 @@ body .mailing {
   -ms-grid-row: 7;
   -ms-grid-column: 1;
   grid-area: mailing;
+  display: grid;
+  justify-items: center;
+  align-content: space-between;
+  padding: 110px 0;
+}
+body .mailing .mailling__logo {
+  width: 95px;
+  height: 85px;
+  background: url("../img/logo.png");
+}
+body .mailing .mailling__title {
+  font-size: 1.5rem;
+  line-height: 2.125rem;
+  font-weight: 400;
+  color: #848789;
+  font-style: italic;
+}
+body .mailing .mailing__inputBtn {
+  display: inline-grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+body .mailing .mailing__inputBtn .mailling__input {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  color: #848789;
+  font-style: italic;
+  width: 400px;
+  height: 70px;
+  margin-right: 8px;
+  padding: 25px;
+}
+body .mailing .mailing__inputBtn .mailing__btn {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  font-weight: 300;
+  color: #ffffff;
+  width: 125px;
+  height: 70px;
+  border: none;
+  background: #58a589;
+}
+body .mailing .mailing__inputBtn .mailing__btn:hover {
+  border: 1px solid #58a589;
+  font-weight: 900;
+  color: #58a589;
+  background: #ffffff;
 }
 body .footer {
   -ms-grid-row: 8;

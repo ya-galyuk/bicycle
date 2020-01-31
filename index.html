@@ -9,7 +9,7 @@
 
     <title>Bicycle</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,25 +18,25 @@
 <header class="header">
     <nav class="header__menu menu">
         <ul class="menu__list">
-            <li class="menu__item"><a href="" class="menu__link">about us</a></li>
-            <li class="menu__item"><a href="" class="menu__link">work</a></li>
+            <li class="menu__item"><a href="#about" class="menu__link">about us</a></li>
+            <li class="menu__item"><a href="#work" class="menu__link">work</a></li>
             <li class="menu__item home-item">
                 <a href="" class="menu__link"><img src="img/logo.png" alt="logo"></a>
             </li>
-            <li class="menu__item"><a href="" class="menu__link">shop</a></li>
-            <li class="menu__item"><a href="" class="menu__link">contact</a></li>
+            <li class="menu__item"><a href="#shop" class="menu__link">shop</a></li>
+            <li class="menu__item"><a href="#contact" class="menu__link">contact</a></li>
         </ul>
     </nav>
 </header>
 <div class="main__top top">
     <img src="images/top.jpg" alt="bicycle" class="top__img">
 </div>
-<section class="about-section about">
+<section id="about" class="about-section about">
     <div class="about__icon"></div>
     <h1 class="about__title">a new generation of vintage bike</h1>
     <p class="about__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
 </section>
-<section class="work-section work">
+<section id="work" class="work-section work">
     <article id="b-oliva" class="work__article bicycle">
         <div class="bicycle__imgBig">
             <img src="img/oliva/oliva-logo.png" alt="oliva-logo.png" class="bicycle__logo">
@@ -118,7 +118,7 @@
         </ul>
     </div>
 </section>
-<section class="shop-section shop">
+<section id="shop" class="shop-section shop">
     <div id="shopItem-1" class="shop__item"><img src="images/shop/shop-1.jpg" alt="" class="shop__img"></div>
     <div id="shopItem-2" class="shop__item"><img src="images/shop/shop-2.jpg" alt="" class="shop__img"></div>
     <div id="shopItem-3" class="shop__item"><img src="images/shop/shop-3.jpg" alt="" class="shop__img"></div>
@@ -140,9 +140,12 @@
 <section class="mailing-section mailing">
     <div class="mailling__logo"></div>
     <h1 class="mailling__title">Stay on the saddle!</h1>
-    <input type="email" class="mailling__input" placeholder="enter your email...">
+    <div class="mailing__inputBtn">
+        <input type="email" class="mailling__input" placeholder="enter your email...">
+        <button class="mailing__btn">GO</button>
+    </div>
 </section>
-<footer class="footer">
+<footer id="contact" class="footer">
     <address class="f-address">
         <h1 class="f-address__title">AOD New York</h1>
         <p>2250 Lexington Avenue
